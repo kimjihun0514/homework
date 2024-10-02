@@ -47,13 +47,13 @@ public class BoardServiceImpl implements BoardService{
 
 	@Override
 	public BoardVO getOneBoard(int id) {
-		int updateCount = this.boardDao.increaseViewCount(id);
+		int updateCount = this.boardDao.updateViewCount(id);
 		
 		if (updateCount == 0) {
 			throw new IllegalArgumentException("잘못된 접근입니다.");
 		}
 		
-		BoardVO boardVO = this.boardDao.getOneBoard(id);
+		BoardVO boardVO = this.boardDao.selectOneBoard(id);
 		
 		return boardVO;
 	}

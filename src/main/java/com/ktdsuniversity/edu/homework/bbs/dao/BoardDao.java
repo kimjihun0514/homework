@@ -18,13 +18,13 @@ public interface BoardDao {
 	 * @param id 게시글의 아이디
 	 * @return
 	 */
-	public int increaseViewCount(int id);
+	public int updateViewCount(int id);
 
 	/**
 	 * 파라미터로 받은 게시글의 아이디와 같은 게시글만 가져옴
 	 * @param id 게시글의 아이디
 	 * @return
 	 */
-	public BoardVO getOneBoard(int id);
+	public BoardVO selectOneBoard(int id);
 	
 }

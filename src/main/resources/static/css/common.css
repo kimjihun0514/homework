@@ -27,3 +27,8 @@ button, input, textarea {
 textarea {
 	height: 300px;
 }
+
+a:link, a:hover, a:visited, a:active {
+	color: #333;
+	text-decoration: none;
+}

@@ -29,8 +29,8 @@ public class BoardServiceImplTest {
 	public void getOneBoard() {
 		BoardVO boardVO = new BoardVO();
 		boardVO.setViewCnt(1);
-		BDDMockito.given(boardDao.increaseViewCount(5)).willReturn(1);
-		BDDMockito.given(boardDao.getOneBoard(5)).willReturn(boardVO);
+		BDDMockito.given(boardDao.updateViewCount(5)).willReturn(1);
+		BDDMockito.given(boardDao.selectOneBoard(5)).willReturn(boardVO);
 		
 		int viewCount = boardService.getOneBoard(5).getViewCnt();
 		BoardVO newBoard = boardService.getOneBoard(5);

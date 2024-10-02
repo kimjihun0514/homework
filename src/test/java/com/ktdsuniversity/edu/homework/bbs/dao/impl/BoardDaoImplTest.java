@@ -23,14 +23,14 @@ public class BoardDaoImplTest {
 	
 	@Test
 	public void increaseViewCount() {
-		int count = this.boardDao.increaseViewCount(5);
+		int count = this.boardDao.updateViewCount(5);
 		
 		assertTrue(count == 1);
 	}
 	
 	@Test
 	public void getOneBoard() {
-		BoardVO a = this.boardDao.getOneBoard(5);
+		BoardVO a = this.boardDao.selectOneBoard(5);
 		
 		int id = a.getId();
 		

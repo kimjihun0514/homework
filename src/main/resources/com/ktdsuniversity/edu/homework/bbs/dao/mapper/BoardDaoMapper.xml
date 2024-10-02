@@ -50,7 +50,7 @@
 	<update id="com.ktdsuniversity.edu.homework.bbs.dao.BoardDao.increaseViewCount" parameterType="_int">
 		UPDATE BOARD 
            SET VIEW_CNT = VIEW_CNT +1
-         WHERE ID = #{id}
+         WHERE ID = #{_parameter}
 	</update>
 	
 	<select id="com.ktdsuniversity.edu.homework.bbs.dao.BoardDao.getOneBoard" resultType="com.ktdsuniversity.edu.homework.bbs.vo.BoardVO"
@@ -65,6 +65,6 @@
              , FILE_NAME
              , ORIGIN_FILE_NAME
           FROM BOARD
-         WHERE ID = #{id}
+         WHERE ID = #{_parameter}
 	</select>
 </mapper>
